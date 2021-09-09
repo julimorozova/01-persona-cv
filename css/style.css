@@ -14,7 +14,7 @@
     margin: 0 auto;
 }
 
-.page_first {
+/*.page_first {
     margin: 5.5rem 3rem 7.8rem 6rem;
 }
 .page_second {
@@ -22,6 +22,15 @@
 }
 .page_third {
     margin: 3rem 6rem 0 3rem;
+}*/
+.page_first {
+    margin: 90px 51px 125px 100px;
+}
+.page_second {
+    margin: 97px 0 118px 0;
+}
+.page_third {
+    margin: 50px 100px 50px 50px;
 }
 .page-container {
     flex-basis: 33.333%;
@@ -42,7 +51,7 @@
     margin: 0 0 28px 0;
 }
 .item-about {
-    min-width: 50%;
+    width: 50%;
 }
 .subtitle {
     font-weight: 500;
@@ -60,30 +69,21 @@
     font-size: 1.8rem;
     line-height: 1.5rem;
     opacity: 0.9;
+    margin-bottom: 15px;
+}
 
-}
-.title_position {
-    margin: 0 0 15px 0;
-}
 .bar {
     height: 7px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
+    margin-bottom: 17px;
 }
 .bar__item {
     height: 7px;
     background: #FFFFFF;
     border-radius: 10px;
 }
-.bar__item_50 {
-    max-width: 50%;
-}
-.bar__item_25 {
-    max-width: 25%;
-}
-.tech-item__bar {
-    margin: 0 0 17px 0;
-}
+
 .text {
     font-weight: 500;
     font-size: .9rem;
@@ -96,7 +96,7 @@
 }
 .text_point {
     position: relative;
-    padding-left: .9rem;
+    padding-left: 13px;
 }
 .text_point::before {
     position: absolute;
@@ -110,26 +110,26 @@
 }
 
 .avatar {
-    position: relative;
     min-height: 750px;
     display: flex;
     flex-direction: column-reverse;
+    background: no-repeat center/100% url("../img/avatar.png");
 }
-.avatar__img {
+/*.avatar__img {
     position: absolute;
     left: 0;
     top: 0;
     max-width: 100%;
     height: auto;
-}
+}*/
 .quote {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 2rem;
 }
 .quote_position {
-    z-index: 1;
-    padding: 0 3rem 5rem 3rem;
+    position: relative;
+    padding: 0 50px 83px 50px;
 }
 .quote::after {
     content: close-quote;
@@ -137,70 +137,60 @@
 .quote::before{
     content: open-quote;
     position: absolute;
-    left: 2.1rem;
+    left: 35px;
 }
 
 @media (max-width: 1200px) {
     .page {
-        max-width: 970px;
+        max-width: 1024px;
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-areas: "info info avatar"
                             "text text text";
     }
     .page_first {
-        margin: 3rem 3rem 2rem 3rem;
+        margin: 50px 50px 30px 50px;
     }
     .page_second {
         grid-area: text;
-        margin: 0 3rem 2rem 3rem;
+        margin: 0 50px 30px 50px;
     }
     .page_third {
         grid-area: avatar;
-        margin: 3rem 3rem 2rem 3rem;
-    }
-    .avatar {
-        min-height: 650px;
+        margin: 10px 50px 30px 50px;
     }
     .quote_position {
-        padding: 0 2rem 5rem 2rem;
+        padding: 0 35px 80px 35px;
     }
     .quote::before{
-        left: 1rem;
+        left: 15px;
     }
 
 }
 @media (max-width: 992px) {
     .page {
-        max-width: 750px;
+        max-width: 768px;
         grid-template-columns: 1fr;
         grid-template-areas: "info"
                             "text"
                             "avatar";
     }
     .page_first {
-        margin: 3rem 3rem 2rem 3rem;
+        margin: 50px 50px 30px 50px;
     }
     .page_second {
         grid-area: text;
-        margin: 3rem 3rem 0 3rem;
+        margin: 50px 50px 0 50px;
     }
     .page_third {
         grid-area: avatar;
-        margin: 3rem 3rem 5rem 3rem;
-    }
-    .avatar {
-        min-height: 750px;
-    }
-    .avatar__img {
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 50px 50px 80px 50px;
     }
     .quote_position {
-        padding: 0 10rem 5rem 10rem;
+        padding: 0 80px 80px 80px;
     }
     .quote::before{
-        left: 9rem;
+        left: 60px;
     }
 
 
@@ -209,23 +199,14 @@
     .page {
         max-width: none;
     }
-
     .page_first {
-        margin: 2rem 1rem 1rem 2rem;
-    }
-
-    .avatar {
-        min-height: 750px;
-    }
-    .avatar__img {
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 30px 16px 16px 30px;
     }
     .quote_position {
-        padding: 0 3rem 10rem 3rem;
+        padding: 0 50px 80px 50px;
     }
     .quote::before{
-        left: 2rem;
+        left: 35px;
     }
 
 }
@@ -235,5 +216,8 @@
     }
     .avatar {
         min-height: 550px;
+    }
+    .quote_position {
+        padding: 0 40px 100px 45px;
     }
 }
