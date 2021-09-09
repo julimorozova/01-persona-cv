@@ -7,12 +7,14 @@
     font-family: 'Inter', sans-serif;
 
 }
+html {
+    height: 100%;
+}
 body {
     display: flex;
-    margin: auto;
     justify-content: center;
     align-items: center;
-    min-height: 945px;
+    min-height: 100%;
 }
 
 .page {
@@ -26,13 +28,13 @@ body {
     margin: 90px 51px 125px 100px;
 }
 .page_second {
-    margin: 97px 0 118px 0;
+    margin: 97px 50px 118px 0;
 }
 .page_third {
-    margin: 50px 100px 50px 50px;
+    margin: 50px 100px 50px 0;
 }
 .page-container {
-    flex-basis: 33.333%;
+    width: 33.333%;
 }
 .person-name {
     font-weight: 600;
@@ -109,26 +111,26 @@ body {
 }
 
 .avatar {
-    min-height: 750px;
+    min-height: 700px;
     display: flex;
     flex-direction: column-reverse;
-    background: no-repeat center/100% url("../img/avatar.png");
+    position: relative;
+   /* background: no-repeat center/100% url("https://s1.1zoom.ru/b4151/745/Foxes_Glance_516067_2048x2732.jpg");*/
 }
-/*.avatar__img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 100%;
+.avatar__img {
+    width: 100%;
+    max-width: 668px;
     height: auto;
-}*/
+}
 .quote {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 2rem;
 }
 .quote_position {
-    position: relative;
-    padding: 0 50px 83px 50px;
+    position: absolute;
+    bottom: 8%;
+    padding: 0 50px 0 50px;
 }
 .quote::after {
     content: close-quote;
@@ -139,13 +141,16 @@ body {
     left: 35px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1370px) {
     .page {
         max-width: 1024px;
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-areas: "info info avatar"
                             "text text text";
+    }
+    .page-container {
+        width: auto;
     }
     .page_first {
         margin: 50px 50px 30px 50px;
@@ -159,7 +164,7 @@ body {
         margin: 10px 50px 30px 50px;
     }
     .quote_position {
-        padding: 0 35px 80px 35px;
+        padding: 0 35px 0 35px;
     }
     .quote::before{
         left: 15px;
@@ -185,8 +190,9 @@ body {
         grid-area: avatar;
         margin: 50px 50px 80px 50px;
     }
+
     .quote_position {
-        padding: 0 80px 80px 80px;
+        padding: 0 80px 0 80px;
     }
     .quote::before{
         left: 60px;
@@ -194,7 +200,7 @@ body {
 
 
 }
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     .page {
         max-width: none;
     }
@@ -202,7 +208,7 @@ body {
         margin: 30px 16px 16px 30px;
     }
     .quote_position {
-        padding: 0 50px 80px 50px;
+        padding: 0 50px 0 50px;
     }
     .quote::before{
         left: 35px;
@@ -214,9 +220,9 @@ body {
         font-size: 10px;
     }
     .avatar {
-        min-height: 550px;
+        min-height: 300px;
     }
     .quote_position {
-        padding: 0 40px 100px 45px;
+        padding: 0 40px 0 45px;
     }
 }
