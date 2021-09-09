@@ -5,24 +5,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+
 }
+body {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 945px;
+}
+
 .page {
     max-width: 1680px;
     color: #fff;
     background: #000;
     display: flex;
-    margin: 0 auto;
 }
 
-/*.page_first {
-    margin: 5.5rem 3rem 7.8rem 6rem;
-}
-.page_second {
-    margin: 6rem 0 7.3rem 0;
-}
-.page_third {
-    margin: 3rem 6rem 0 3rem;
-}*/
 .page_first {
     margin: 90px 51px 125px 100px;
 }
