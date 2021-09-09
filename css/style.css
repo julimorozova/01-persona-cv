@@ -28,10 +28,10 @@ body {
     margin: 90px 51px 125px 100px;
 }
 .page_second {
-    margin: 97px 50px 118px 0;
+    margin: 97px 0 118px 0;
 }
 .page_third {
-    margin: 50px 100px 50px 0;
+    margin: 50px 100px 50px 50px;
 }
 .page-container {
     width: 33.333%;
@@ -112,25 +112,25 @@ body {
 
 .avatar {
     min-height: 700px;
+
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-   /* background: no-repeat center/100% url("../img/avatar.png");*/
+    background: url("../img/avatar.png")  center/cover no-repeat;
+
 }
-.avatar__img {
+/*.avatar__img {
     width: 100%;
     max-width: 668px;
     height: auto;
-}
+}*/
 .quote {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 2rem;
 }
 .quote_position {
-    position: absolute;
-    bottom: 8%;
-    padding: 0 50px 0 50px;
+    padding: 0 50px 8% 50px;
 }
 .quote::after {
     content: close-quote;
@@ -140,7 +140,6 @@ body {
     position: absolute;
     left: 35px;
 }
-
 @media (max-width: 1370px) {
     .page {
         max-width: 1024px;
@@ -161,10 +160,10 @@ body {
     }
     .page_third {
         grid-area: avatar;
-        margin: 10px 50px 30px 50px;
+        margin: 10px 40px 30px 50px;
     }
     .quote_position {
-        padding: 0 35px 0 35px;
+        padding: 0 35px 8% 35px;
     }
     .quote::before{
         left: 15px;
@@ -192,7 +191,7 @@ body {
     }
 
     .quote_position {
-        padding: 0 80px 0 80px;
+        padding: 0 80px 8% 80px;
     }
     .quote::before{
         left: 60px;
@@ -223,6 +222,6 @@ body {
         min-height: 300px;
     }
     .quote_position {
-        padding: 0 40px 0 45px;
+        padding: 0 40px 8% 45px;
     }
 }
