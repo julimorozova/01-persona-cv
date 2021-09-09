@@ -115,7 +115,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-   /* background: no-repeat center/100% url("https://s1.1zoom.ru/b4151/745/Foxes_Glance_516067_2048x2732.jpg");*/
+   /* background: no-repeat center/100% url("../img/avatar.png");*/
 }
 .avatar__img {
     width: 100%;
